@@ -50,6 +50,9 @@ public class _02_FindTheHiddenButton implements ActionListener{
 			panel.add(buttons[i]);
 			if(i==hiddenbutton) {
 				buttons[i].setText("ME");
+				if(i==hiddenbutton) {
+					buttons[i].setText("blank");
+				}
 			}
 		}
 		//9 add the panel to the window
@@ -81,7 +84,9 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		JButton buttonClicked = (JButton)e.getSource();
 		
 		//17. if the hiddenButton is clicked, tell the user that they win.
-		
+		if(buttonClicked==buttons[hiddenbutton]) {
+			System.out.println("you win");
+		}
 		//18. else tell them to try again
 	}
 }
